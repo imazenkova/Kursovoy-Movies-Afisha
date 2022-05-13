@@ -1,0 +1,139 @@
+﻿<Window x:Class="MoviesAfisha.View.AdminCinemaWindows.AddSessionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:val="clr-namespace:MoviesAfisha.Models.Validation" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:MoviesAfisha.View.AdminCinemaWindows" xmlns:admincinemaviewmodels="clr-namespace:MoviesAfisha.ViewModels.AdminCinemaViewModels" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" d:DataContext="{d:DesignInstance Type=admincinemaviewmodels:AddSessionViewModel}"
+        mc:Ignorable="d"
+        Title="Новый сеанс" 
+        Height="600" Width="450"
+        MinHeight="300" MinWidth="350"
+        Name="AddSession"
+        Background="Transparent"
+        Icon="/Images/Icons/film.png">
+    <Grid Background="#FFFAFA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Vertical"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Width="300">
+            <TextBlock Text="Выберите фильм"
+                        TextAlignment="Center"
+                         Margin="0 0 0 10"
+                         FontSize="18"
+                         FontFamily="heivetica"/>
+            <ComboBox Name="FilmsBox" 
+                         ItemsSource="{Binding AllFilms}"
+                         DisplayMemberPath="Name"
+                         SelectedItem="{Binding Film}"
+                         materialDesign:TextFieldAssist.UnderlineBrush="#7590c9"
+                         Background="#DCDCDC"
+                         FontSize="16"
+                         FontFamily="heivetica"
+                         Opacity="0.5"/>
+            <TextBlock Text="Выберите зал"
+                         TextAlignment="Center"
+                         Margin="0 16 0 10"
+                         FontSize="18"
+                         FontFamily="heivetica"/>
+            <ComboBox Name="HallsBox" 
+                         ItemsSource="{Binding AllHalls}"
+                         DisplayMemberPath="Name"
+                         SelectedItem="{Binding Hall}"
+                         materialDesign:TextFieldAssist.UnderlineBrush="#7590c9"
+                         Background="#DCDCDC"
+                         FontSize="16"
+                         FontFamily="heivetica"
+                         Opacity="0.5"/>
+            <TextBlock Text="Дата"
+                         TextAlignment="Center"
+                         Margin="0 16 0 10"
+                         FontSize="18"
+                         FontFamily="heivetica"/>
+            <!--<DatePicker x:Name="DatePicker"  Width="100" materialDesign:HintAssist.Hint="Дата">
+                <DatePicker.SelectedDate>
+                    <Binding Path="Datee" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <val:DateRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </DatePicker.SelectedDate>
+            </DatePicker>-->
+            <TextBox Name="DateBox"
+                         materialDesign:TextFieldAssist.UnderlineBrush="#7590c9"
+                         Validation.ErrorTemplate="{StaticResource ErrorTemplate}"
+                         BorderThickness="0"
+                         Background="#DCDCDC"
+                         FontSize="16"
+                         FontFamily="heivetica"
+                         Opacity="0.5"
+                         MaxLength="15">
+                <TextBox.Text>
+                    <Binding Path="Date" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <val:DateRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <TextBlock Text="Время"
+                         TextAlignment="Center"
+                         Margin="0 40 0 10"
+                         FontSize="18"
+                         FontFamily="heivetica"/>
+            <TextBox Name="TimeBox" 
+                         Validation.ErrorTemplate="{StaticResource ErrorTemplate}"
+                         materialDesign:TextFieldAssist.UnderlineBrush="#7590c9"
+                         Background="#DCDCDC"
+                         FontSize="16"
+                         FontFamily="heivetica"
+                         Opacity="0.5"
+                         MaxLength="5">
+                <TextBox.Text>
+                    <Binding Path="Time" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <val:TimeRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <TextBlock Text="Стоимость в бел.руб."
+                         TextAlignment="Center"
+                         Margin="0 16 0 10"
+                         FontSize="18"
+                         FontFamily="heivetica"/>
+            <TextBox Name="PriceBox" 
+                         Validation.ErrorTemplate="{StaticResource ErrorTemplate}"
+                         materialDesign:TextFieldAssist.UnderlineBrush="#7590c9"
+                         Background="#DCDCDC"
+                         FontSize="16"
+                         FontFamily="heivetica"
+                         Opacity="0.5"
+                         MaxLength="2">
+                <TextBox.Text>
+                    <Binding Path="Price" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <val:PriceRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+        <Button Grid.Row="1" 
+                    Command="{Binding AddSession}"
+                    CommandParameter="{Binding ElementName=AddSession}"
+                    Content="Добавить сеанс"
+                    FontSize="16"
+                    FontFamily="heivetica"
+                    Width="300"
+                    Height="40"
+                    Background="#2b874a"
+                    BorderBrush="#2b874a"/>
+    </Grid>
+</Window>

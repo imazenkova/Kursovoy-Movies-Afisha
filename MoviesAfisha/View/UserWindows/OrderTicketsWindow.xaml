@@ -1,0 +1,276 @@
+﻿<Window x:Class="MoviesAfisha.View.UserWindows.OrderTicketsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoviesAfisha.View.UserWindows" 
+        xmlns:userviewmodels="clr-namespace:MoviesAfisha.ViewModels.UserViewModels" 
+        d:DataContext="{d:DesignInstance Type=userviewmodels:OrderTicketsViewModel}"
+        mc:Ignorable="d"
+        Title="Заказ билетов"
+        WindowStartupLocation="CenterScreen"
+        Height="760" Width="1230"
+        MinHeight="750" MinWidth="1220"
+        Background="White"
+        Icon="/Images/Icons/Ticket.png">
+    <Window.Resources>
+        <DataTemplate x:Key="listTicketsTemplate">
+            <Border CornerRadius="20"
+                        BorderThickness="1"
+                        BorderBrush="#7590c9">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFCFCFC" Offset="0"/>
+                        <GradientStop Color="#FFBCD3C5" Offset="0.443"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid Margin="0 10 0 10"
+                      Width="147" Height="135">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="21"/>
+                        <RowDefinition Height="21"/>
+                        <RowDefinition Height="21"/>
+                        <RowDefinition Height="21"/>
+                        <RowDefinition Height="21"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="2" 
+                          Orientation="Horizontal"      
+                          HorizontalAlignment="Center">
+                        <Label Content="Цена: "
+                               Foreground="Black"
+                               FontFamily="heivetica"
+                                FontWeight="DemiBold"/>
+                        <Label Grid.Row="0"
+                               Content="{Binding Path=Price}"
+                               Foreground="Black"
+                               FontFamily="heivetica"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="0" 
+                          Orientation="Horizontal"      
+                          HorizontalAlignment="Center">
+                        <Label Content="Место: "
+                               Foreground="Black"
+                               FontFamily="heivetica"
+                               FontWeight="DemiBold"/>
+                        <Label Grid.Row="0"
+                               Content="{Binding Path=Place}"
+                               Foreground="Black"
+                               FontFamily="heivetica"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" 
+                          Orientation="Horizontal"      
+                          HorizontalAlignment="Center">
+                        <Label Content="Ряд: "
+                               Foreground="Black"
+                               FontFamily="heivetica"
+                               FontWeight="DemiBold"/>
+                        <Label Grid.Row="0"
+                               Content="{Binding Path=Row}"
+                               Foreground="Black"
+                               FontFamily="heivetica"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" 
+                          Orientation="Horizontal"      
+                          HorizontalAlignment="Center">
+                        <Label Content="Дата: "
+                               Foreground="Black"
+                               FontFamily="heivetica"
+                               FontWeight="DemiBold"/>
+                        <Label Grid.Row="0"
+                               Content="{Binding Path=Sessions.Date}"
+                               Foreground="Black"
+                               FontFamily="heivetica"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="4" 
+                          Orientation="Horizontal"      
+                          HorizontalAlignment="Center">
+                        <Label Content="Время: "
+                               Foreground="Black"
+                               FontFamily="heivetica"
+                               FontWeight="DemiBold"/>
+                        <Label Grid.Row="0"
+                               Content="{Binding Path=Sessions.Time}"
+                               Foreground="Black"
+                               FontFamily="heivetica"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="5" 
+                          Orientation="Horizontal"      
+                          HorizontalAlignment="Center">
+                        <Label Content="Кинотеатр: "
+                               Foreground="Black"
+                               FontFamily="heivetica"
+                               FontWeight="DemiBold"/>
+                        <Label Grid.Row="0"
+                               Content="{Binding Path=Sessions.Halls.Cinemas.Name}"
+                               Foreground="Black"
+                               FontFamily="heivetica"/>
+                    </StackPanel>
+
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+
+        <!--Choose ticket-->
+        <Grid Visibility="Visible">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="450"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0"
+                        Orientation="Vertical">
+                <Image Source="/Images/zal.png"
+                       Width="400"/>
+                <TextBlock Text="Кинотеатр"
+                             TextAlignment="Center"
+                             Margin="0 10 0 6"
+                             FontSize="18"
+                             FontFamily="heivetica"/>
+                <ComboBox  ItemsSource="{Binding AllCinemas}"
+                             SelectedItem="{Binding Cinema}"
+                             DisplayMemberPath="Name"
+                             Background="#DCDCDC"
+                             FontSize="16"
+                             FontFamily="heivetica"
+                             Opacity="0.5"
+                             Width="250"/>
+                <TextBlock Text="Дата"
+                             TextAlignment="Center"
+                             Margin="0 10 0 6"
+                             FontSize="18"
+                             FontFamily="heivetica"/>
+                <ComboBox  ItemsSource="{Binding AllSessions}"
+                             SelectedItem="{Binding Date}"
+                             DisplayMemberPath="Date"
+                             Background="#DCDCDC"
+                             FontSize="16"
+                             FontFamily="heivetica"
+                             Opacity="0.5"
+                             Width="250"/>
+                <TextBlock Text="Время"
+                             TextAlignment="Center"
+                             Margin="0 10 0 6"
+                             FontSize="18"
+                             FontFamily="heivetica"/>
+                <ComboBox  ItemsSource="{Binding AllSessions}"
+                             DisplayMemberPath="Time"
+                             SelectedItem="{Binding Time}"
+                             Background="#DCDCDC"
+                             FontSize="16"
+                             FontFamily="heivetica"
+                             Opacity="0.5"
+                             Width="250"/>
+                <!--<TextBlock Text="Ряд"
+                             TextAlignment="Center"
+                             Margin="0 10 0 6"
+                             FontSize="18"
+                             FontFamily="heivetica"/>
+                <ComboBox Name="RowTickets"
+                             ItemsSource="{Binding Places}"
+                             SelectedItem="{Binding Row}"
+                             Background="#DCDCDC"
+                             FontSize="16"
+                             FontFamily="heivetica"
+                             Opacity="0.5"
+                             Width="250"/>-->
+                <!--<ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                    <ComboBoxItem Content="9"/>
+                    <ComboBoxItem Content="10"/>-->
+                <!--<TextBlock Text="Место"
+                             TextAlignment="Center"
+                             Margin="0 10 0 6"
+                             FontSize="18"
+                             FontFamily="heivetica"/>
+                <ComboBox Name="PlaceTickets"
+                             SelectedItem="{Binding Place}"
+                             Background="#DCDCDC"
+                             FontSize="16"
+                             FontFamily="heivetica"
+                             Opacity="0.5"
+                             Width="250">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                    <ComboBoxItem Content="9"/>
+                    <ComboBoxItem Content="10"/>
+                </ComboBox>-->
+                <StackPanel Orientation="Vertical">
+                    <Button  Content="Искать"
+                             Command="{Binding SortTickets}"
+                             Margin="0 24 0 0"
+                             Width="200"
+                             Background="#3B5998"
+                             BorderBrush="#3B5998"
+                             Focusable="False"/>
+                    <Button  Content="Показать все билеты"
+                             Command="{Binding RefreshTickets}"
+                             Margin="0 14 0 0"
+                             Width="200"
+                             Background="#3B5998"
+                             BorderBrush="#3B5998"
+                             Focusable="False"/>
+                </StackPanel>
+
+            </StackPanel>
+
+            <Grid Grid.Column="1"
+                  Background="#7590c9">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Border BorderThickness="0"
+                            BorderBrush="#7590c9">
+                    <Grid Grid.Row="0">
+                        <ScrollViewer Focusable="False">
+                            <ListBox Name="ViewSelectedTickets" 
+                                     ItemTemplate="{StaticResource listTicketsTemplate}"
+                                     ItemsSource="{Binding SelectedTickets}" 
+                                     Focusable="False"
+                                     SelectedItem="{Binding SelectedTicket}">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel Orientation="Horizontal" 
+                                           IsItemsHost="True"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Top"/>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                            </ListBox>
+                        </ScrollViewer>
+                    </Grid>
+                </Border>
+
+                <Grid Grid.Row="1">
+                    <Border BorderThickness="1"
+                            BorderBrush="#7590c9">
+                        <Button Content="Заказать"
+                                Command="{Binding AddOrderTicketWindow}"
+                                CommandParameter="{Binding ElementName=ViewSelectedTickets}"
+                                Width="200"
+                                Background="#3B5998"
+                                BorderBrush="#3B5998"
+                                Focusable="False"/>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

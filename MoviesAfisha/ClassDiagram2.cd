@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MoviesAfisha.App" Collapsed="true">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.AttachedProperty.PasswordBoxAssistant" Collapsed="true">
+    <Position X="12.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBABAAAAAAAAAAEAAAAAAACoABAgAAAAAAAAAICAAAg=</HashCode>
+      <FileName>Models\AttachedProperty\PasswordBoxAssistant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.Admin" Collapsed="true">
+    <Position X="1.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DataBaseModels\Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.AdminCinema" Collapsed="true">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAQAAAAAAAAAACAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DataBaseModels\AdminCinema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.Cinemas" Collapsed="true">
+    <Position X="1.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAABAAAAQAgAAEAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DataBaseModels\Cinemas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.DataBaseContext" Collapsed="true">
+    <Position X="5.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAADAAAQAAkCAADAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DataBaseModels\DataBaseContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.Film" Collapsed="true">
+    <Position X="10.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAEACIAAAQAACIAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Models\DataBaseModels\Film.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.Halls" Collapsed="true">
+    <Position X="3.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAACAAAAQCAAAACAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DataBaseModels\Halls.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.OrderTickets" Collapsed="true">
+    <Position X="7" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQDAAAACAAAAAAAAAAAAARABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DataBaseModels\OrderTickets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.Sessions" Collapsed="true">
+    <Position X="7" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAQEABAAAAAAAAAABAABAAAAAAAAAQA=</HashCode>
+      <FileName>Models\DataBaseModels\Sessions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.Tickets" Collapsed="true">
+    <Position X="12.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAACABAACAACAAAgAAAEAAAAAAAAA=</HashCode>
+      <FileName>Models\DataBaseModels\Tickets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.DataBaseModels.User" Collapsed="true">
+    <Position X="7" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAQAAAAAAACAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DataBaseModels\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Repository.AdminCinemaRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Repository\AdminCinemaRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.Models.Repository.CinemasRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Repository\CinemasRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.Models.Repository.FilmRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAgAAA=</HashCode>
+      <FileName>Models\Repository\FilmRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.Models.Repository.HallsRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Repository\HallsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.Models.Repository.OrderTicketsRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAQAABAAABAAAAAAAEAAEAAAgAAAAgAAAA=</HashCode>
+      <FileName>Models\Repository\OrderTicketsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.Models.Repository.SessionsRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Repository\SessionsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.Models.Repository.TicketsRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAIAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Repository\TicketsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.Models.Repository.UnitOfWork" Collapsed="true">
+    <Position X="5.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggQBAAAAAAIQAQACABAAAAAAgCAQDAEAAAAAAgCAAAA=</HashCode>
+      <FileName>Models\Repository\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Repository.UserRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAIAAAAAQAABAAAEAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Repository\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.Models.Validation.AddressRule" Collapsed="true">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Validation\AddressRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Validation.AdminCinemaRule" Collapsed="true">
+    <Position X="7" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Validation\AdminCinemaRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Validation.DateRule" Collapsed="true">
+    <Position X="7" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Validation\DateRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Validation.GenreRule" Collapsed="true">
+    <Position X="1.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Validation\GenreRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Validation.LoginValidationRule" Collapsed="true">
+    <Position X="8.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Validation\LoginValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Validation.NameRule" Collapsed="true">
+    <Position X="3.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Validation\NameRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Validation.OnlyLettersRule" Collapsed="true">
+    <Position X="5.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Validation\OnlyLettersRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Validation.PriceRule" Collapsed="true">
+    <Position X="1.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Validation\PriceRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Models.Validation.TimeRule" Collapsed="true">
+    <Position X="3.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Validation\TimeRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Properties.Resources" Collapsed="true">
+    <Position X="5.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.Properties.Settings" Collapsed="true">
+    <Position X="10.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.View.AdminCinemaWindows.AddFilmWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AdminCinemaWindows\AddFilmWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.AdminCinemaWindows.AddHallWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AdminCinemaWindows\AddHallWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.AdminCinemaWindows.AddSessionWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AdminCinemaWindows\AddSessionWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.AdminCinemaWindows.AdminCinemaWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>View\AdminCinemaWindows\AdminCinemaWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.AdminCinemaWindows.InformationWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>View\AdminCinemaWindows\InformationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.AdminWindows.AddAdminCinemaWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AdminWindows\AddAdminCinemaWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.21" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.AdminWindows.AddUserWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AdminWindows\AddUserWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.AdminWindows.AdminWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAQAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AdminWindows\AdminWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.AdminWindows.EditUserWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AdminWindows\EditUserWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.MessageWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>View\MessageWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.UserWindows.AddOrderTicketWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\UserWindows\AddOrderTicketWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.UserWindows.LoginWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAABAAAAAAACAAAAAAAAAAASAAIAAAAAAAAAA=</HashCode>
+      <FileName>View\UserWindows\LoginWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.UserWindows.OrderTicketsWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>View\UserWindows\OrderTicketsWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.UserWindows.UserInformationWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\UserWindows\UserInformationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.View.UserWindows.UserWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\UserWindows\UserWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.AdminCinemaViewModels.AddFilmViewModel" Collapsed="true">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABgCAAAAAgAAAAIAAAQAACIAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\AdminCinemaViewModels\AddFilmViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.AdminCinemaViewModels.AddHallViewModel" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAgAAAAAAAAAAQAAAAACAAABAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminCinemaViewModels\AddHallViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.AdminCinemaViewModels.AddSessionViewModel" Collapsed="true">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAgAIQAAAAAAAQgAAAAIgAAABAABgAAAAIAABQA=</HashCode>
+      <FileName>ViewModels\AdminCinemaViewModels\AddSessionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.AdminCinemaViewModels.AdminCinemaViewModel" Collapsed="true">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggAEAAIAEAAAAAAAAQIAAQAGwAEAAIggAQAAAYiAFAE=</HashCode>
+      <FileName>ViewModels\AdminCinemaViewModels\AdminCinemaViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.AdminCinemaViewModels.InformationViewModel" Collapsed="true">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminCinemaViewModels\InformationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.AdminViewModels.AddAdminCinemaViewModel" Collapsed="true">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAEAAAAAAQAAAAAAgAAAAAACEAAAABAAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\AddAdminCinemaViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.AdminViewModels.AddUserViewModel" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAiAAAAIAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\AddUserViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.AdminViewModels.AdminViewModel" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEBAAABBQAQAAQgEQABgQAAAAEAAAggQYAAgKCAAAQ=</HashCode>
+      <FileName>ViewModels\AdminViewModels\AdminViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.AdminViewModels.EditUserViewModel" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAABAAAARAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\EditUserViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.BaseViewModel" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.Commands.MessageWindowCommand" Collapsed="true">
+    <Position X="1.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAQAAA=</HashCode>
+      <FileName>ViewModels\Commands\MessageWindowCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.Commands.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Commands\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.UserViewModels.AddOrderTicketViewModel" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAECAQABAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserViewModels\AddOrderTicketViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.UserViewModels.LoginViewModel" Collapsed="true">
+    <Position X="11.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAQAAAAAAAIAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserViewModels\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.UserViewModels.OrderTicketsViewModel" Collapsed="true">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEEAAAEBAEAhAQAAQAAAAAEAAAAIAgBACACAIABBRA=</HashCode>
+      <FileName>ViewModels\UserViewModels\OrderTicketsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.UserViewModels.UserInformationViewModel" Collapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAABAAgAAAAAAAAAgQAAAQAAAAEAAAACAAAAAgAAAAA=</HashCode>
+      <FileName>ViewModels\UserViewModels\UserInformationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoviesAfisha.ViewModels.UserViewModels.UserViewModel" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABEAIgAAACAAEAAAWJAAAUEACAAAAgAACAAAAAgBAA=</HashCode>
+      <FileName>ViewModels\UserViewModels\UserViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MoviesAfisha.Models.DataBaseModels.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\DataBaseModels\DataBaseContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

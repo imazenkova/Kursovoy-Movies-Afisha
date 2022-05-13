@@ -1,0 +1,167 @@
+﻿<Window x:Class="MoviesAfisha.View.AdminCinemaWindows.AdminCinemaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoviesAfisha.View.AdminCinemaWindows" 
+        xmlns:admincinemaviewmodels="clr-namespace:MoviesAfisha.ViewModels.AdminCinemaViewModels" 
+        d:DataContext="{d:DesignInstance Type=admincinemaviewmodels:AdminCinemaViewModel}"
+        mc:Ignorable="d"
+        Title="Администратор" 
+        Height="650" Width="1350"
+        MinHeight="550" MinWidth="1200"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Images/video-player-color.png"
+        Background="Transparent">
+    <Grid Background="#FFFAFA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <!--#42AAFF-->
+        <TabControl Grid.Row="0" 
+                    Background="#2b874a" 
+                    Focusable="False"  
+                    FontFamily="heivetica"
+                    FontSize="16"
+                    Opacity="0.9"
+                    SelectedItem="{Binding SelectedTabItem}">
+            <TabItem Name="FilmsTab" >
+                <TabItem.Header>
+                    <TextBlock Text="Фильмы"/>
+                </TabItem.Header>
+                <TabItem.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Удалить" Command="{Binding DeleteItem}" />
+                    </ContextMenu>
+                </TabItem.ContextMenu>
+                <ScrollViewer>
+                    <ListView Name="ViewAllFilms"  
+                              ItemsSource="{Binding AllFilms}"
+                              SelectedItem="{Binding SelectedFilm}"
+                              FontSize="16">
+                        <ListView.View>
+                            <GridView >
+                                <GridViewColumn Header="Название фильма" 
+                                            DisplayMemberBinding="{Binding Path=Name}"/>
+                                <GridViewColumn Header="Жанр"
+                                            DisplayMemberBinding="{Binding Path=Genre}"/>
+                                <GridViewColumn Header="Страна"
+                                            DisplayMemberBinding="{Binding Path=Country}"/>
+                                <GridViewColumn Header="Режиссёр"
+                                            DisplayMemberBinding="{Binding Path=Director}"/>
+                                <GridViewColumn Header="Время"
+                                            DisplayMemberBinding="{Binding Path=Time}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Name="SessionsTab">
+                <TabItem.Header>
+                    <TextBlock Text="Билеты"/>
+                </TabItem.Header>
+                <!--<TabItem.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Удалить" Command="{Binding DeleteItem}"/>
+                    </ContextMenu>
+                </TabItem.ContextMenu>-->
+                <ScrollViewer>
+                    <ListView Name="ViewAllSessions" 
+                          ItemsSource="{Binding AllTickets}"  
+                          FontSize="16">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Номер билета"
+                                                DisplayMemberBinding="{Binding Path=Id}"/>
+                                <GridViewColumn Header="Номер зала"
+                                                DisplayMemberBinding="{Binding Path=Sessions.Halls.Name}"/>
+                                <GridViewColumn Header="Номер фильма"
+                                            DisplayMemberBinding="{Binding Path=Sessions.IdFilm}"/>
+                                <GridViewColumn Header="Дата"
+                                            DisplayMemberBinding="{Binding Path=Sessions.Date}"/>
+                                <GridViewColumn Header="Время"
+                                            DisplayMemberBinding="{Binding Path=Sessions.Time}"/>
+                                <GridViewColumn Header="Ряд"
+                                            DisplayMemberBinding="{Binding Path=Row}"/>
+                                <GridViewColumn Header="Место"
+                                            DisplayMemberBinding="{Binding Path=Place}"/>
+                                <GridViewColumn Header="Цена"
+                                            DisplayMemberBinding="{Binding Path=Price}"/>
+                                <GridViewColumn Header="В наличии"
+                                            DisplayMemberBinding="{Binding Path=Availability}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Name="OrderTicketsTab">
+                <TabItem.Header>
+                    <TextBlock Text="Заказанные билеты"/>
+                </TabItem.Header>
+                <!--<TabItem.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Удалить" Command="{Binding DeleteItem}"/>
+                    </ContextMenu>
+                </TabItem.ContextMenu>-->
+                <ScrollViewer>
+                    <ListView Name="ViewAllOrderTickets" 
+                          ItemsSource="{Binding AllOrderTickets}"  
+                          FontSize="16">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Номер билета"
+                                            DisplayMemberBinding="{Binding Path=IdTicket}"/>
+                                <GridViewColumn Header="Фамилия"
+                                            DisplayMemberBinding="{Binding Path=Surname}"/>
+                                <GridViewColumn Header="Имя"
+                                            DisplayMemberBinding="{Binding Path=Name}"/>
+                                <GridViewColumn Header="Имя пользователя"
+                                            DisplayMemberBinding="{Binding Path=User.Username}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+        <StackPanel Grid.Row="1" 
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Content="Новый фильм" 
+                    Command="{Binding OpenAddFilmWindow}"
+                    BorderThickness="0"
+                    Focusable="False"
+                    FontFamily="heivetica"
+                    Background="#2b874a"
+                    BorderBrush="#2b874a"
+                    Margin="0 0 10 0"/>
+            <Button Content="Новый сеанс" 
+                    Command="{Binding OpenAddSessionWindow}"
+                    BorderThickness="0"
+                    Focusable="False"
+                    FontFamily="heivetica"
+                    Background="#2b874a"
+                    BorderBrush="#2b874a"
+                    Margin="0 0 10 0"/>
+            <Button Content="Добавить зал" 
+                    Command="{Binding OpenAddHallWindow}"
+                    BorderThickness="0"
+                    Focusable="False"
+                    FontFamily="heivetica"
+                   Background="#2b874a"
+                    BorderBrush="#2b874a"
+                    Margin="0 0 10 0"/>
+            <Button Content="Обновить" 
+                    Command="{Binding RefreshData}"
+                    Background="#2b874a"
+                    BorderThickness="0"
+                    Focusable="False"
+                    FontFamily="heivetica"
+                    BorderBrush="#2b874a"
+                    Margin="0 0 10 0"/>
+            <Button Click="LoginWindowOpen"
+                    Background="#2b874a"
+                    BorderBrush="#2b874a"/>
+        </StackPanel>
+    </Grid>
+</Window>

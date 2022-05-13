@@ -1,0 +1,119 @@
+﻿<Window x:Class="MoviesAfisha.View.AdminWindows.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoviesAfisha.View.AdminWindows" 
+        xmlns:adminviewmodels="clr-namespace:MoviesAfisha.ViewModels.AdminViewModels" 
+        d:DataContext="{d:DesignInstance Type=adminviewmodels:AdminViewModel}"
+        mc:Ignorable="d"
+        Title="Администратор" 
+        Height="550" Width="900"
+        MinHeight="350" MinWidth="600"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Images/video-player-color.png"
+        Background="Transparent">
+    
+    <Grid Background="#FFFAFA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <!--#42AAFF-->
+        <TabControl Grid.Row="0" 
+                    Background="#3B5998" 
+                    Focusable="False"  
+                    FontFamily="heivetica"
+                    FontSize="16"
+                    SelectedItem="{Binding SelectedTabItem}">
+            <TabItem Name="UsersTab" >
+                <TabItem.Header>
+                    <TextBlock Text="Пользователи"/>
+                </TabItem.Header>
+                <TabItem.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Удалить" Command="{Binding DeleteItem}" />
+                    </ContextMenu>
+                </TabItem.ContextMenu>
+                <ScrollViewer>
+                    <ListView Name="ViewAllUsers"  
+                              ItemsSource="{Binding AllUsers}"
+                              SelectedItem="{Binding SelectedUser}"
+                              FontSize="16">
+                        <ListView.View>
+                            <GridView >
+                                <GridViewColumn Header="Имя пользователя" 
+                                            DisplayMemberBinding="{Binding Path=Username}"/>
+                                <GridViewColumn Header="Пароль"
+                                            DisplayMemberBinding="{Binding Path=Password}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Name="CinemaTab">
+                <TabItem.Header>
+                    <TextBlock Text="Кинотеатры"/>
+                </TabItem.Header>
+                <ScrollViewer>
+                    <ListView Name="ViewAllCinemas" 
+                          ItemsSource="{Binding AllCinemas}"  
+                          SelectedItem="{Binding SelectedCinema}"
+                          FontSize="16">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Администратор кинотеатра"
+                                            DisplayMemberBinding="{Binding Path=AdminCinema.Username}"/>
+                                <GridViewColumn Header="Пароль"
+                                            DisplayMemberBinding="{Binding Path=AdminCinema.Password}"/>
+                                <GridViewColumn Header="Кинотеатр"
+                                            DisplayMemberBinding="{Binding Path=Name}"/>
+                                <GridViewColumn Header="Адрес"
+                                            DisplayMemberBinding="{Binding Path=Address}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+        <StackPanel Grid.Row="1" 
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Content="Новый пользователь" 
+                    Command="{Binding OpenAddNewUserWindow}"
+                    BorderThickness="0"
+                    Focusable="False"
+                    FontFamily="heivetica"
+                    Background="#3B5998"
+                    BorderBrush="#3B5998"
+                    Margin="0 0 10 0"/>
+            <Button Content="Новый администратор кинотеатра" 
+                    Command="{Binding OpenAddNewAdminCinemaWindow}"
+                    BorderThickness="0"
+                    Focusable="False"
+                    FontFamily="heivetica"
+                    Background="#3B5998"
+                    BorderBrush="#3B5998"
+                    Margin="0 0 10 0"/>
+            <Button Content="Редактировать пароль" 
+                    Command="{Binding OpenEditUserWindow }"
+                    BorderThickness="0"
+                    Focusable="False"
+                    FontFamily="heivetica"
+                    Background="#3B5998"
+                    BorderBrush="#3B5998"
+                    Margin="0 0 10 0"/>
+            <Button Content="Обновить" 
+                    Command="{Binding RefreshData}"
+                    Background="#3B5998"
+                    BorderThickness="0"
+                    Focusable="False"
+                    FontFamily="heivetica"
+                    BorderBrush="#3B5998"
+                    Margin="0 0 10 0"/>
+            <Button Click="LoginWindowOpen"
+                    Background="#3B5998"
+                    BorderBrush="#3B5998"/>
+        </StackPanel>
+    </Grid>
+</Window>

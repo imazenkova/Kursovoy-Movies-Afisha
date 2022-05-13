@@ -1,0 +1,267 @@
+﻿<Window x:Class="MoviesAfisha.View.UserWindows.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoviesAfisha.View.UserWindows" 
+        xmlns:userviewmodels="clr-namespace:MoviesAfisha.ViewModels.UserViewModels" 
+        d:DataContext="{d:DesignInstance Type=userviewmodels:UserViewModel}"
+        mc:Ignorable="d"
+        Title=""
+        Name="User"
+        Height="750" Width="1220"
+        MinHeight="700" MinWidth="1080"
+        Background="White"
+        Icon="/Images/video-player-color.png">
+    <Window.Resources>
+        <DataTemplate x:Key="listTemplate">
+            <Border CornerRadius="20"
+                        BorderThickness="1"
+                        BorderBrush="#7590c9"
+                        Background="White">
+                <Grid  Margin="5" 
+                       Width="230" Height="470" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="310"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Image  Margin="0 20 0 0"
+                                Width="200" 
+                                Height="300" 
+                                Source="{Binding Path=URL}"/>
+                    </Grid>
+
+                    <StackPanel Grid.Row="1" Orientation="Vertical">
+                        <TextBlock FontSize="20" 
+                                   Text="{Binding  Path=Name}" 
+                                   FontWeight="DemiBold"
+                                   TextAlignment="Center"
+                                   FontFamily="heivetica"
+                                   HorizontalAlignment="Center" 
+                                   Foreground="Black"
+                                   Opacity="0.8"
+                                   TextWrapping="Wrap"
+                                   Margin="0 9 0 10"/>
+                        <TextBlock FontSize="18" 
+                                   Text="{Binding  Path=Genre}" 
+                                   FontWeight="Light"
+                                   HorizontalAlignment="Center"
+                                   FontFamily="heivetica"
+                                   TextAlignment="Center"
+                                   Foreground="Gray"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                    <Button x:Name="OrderTicketButton"
+                            Grid.Row="2"
+                            Margin="0 0 0 0"
+                            Content="Заказать билет"
+                            FontSize="20"
+                            Width="215" Height="40" 
+                            Style="{StaticResource OrderButton}"
+                            Click="OpenOrderTisketsWindow" />
+
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="65"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--Top Menu-->
+
+            <Grid Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="420"/>
+                        <ColumnDefinition Width="380"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+
+                <!--Search-->
+
+                <StackPanel Grid.Column="1"
+                            HorizontalAlignment="Center">
+                    <StackPanel  Orientation="Horizontal"
+                         Margin="0 15 0 0"
+                         Background="#EEEEEE"
+                         Height="40">
+                        <TextBox   Name="SearchBox"
+                                   Grid.Column="1"
+                                   Tag="Поиск"
+                                   Text="{Binding Path=SearchName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                   FontFamily="heivetica"
+                                   FontWeight="Light"
+                                   Background="#EEEEEE"
+                                   FontSize="20"
+                                   Foreground="Gray"
+                                   BorderThickness="0"
+                                   HorizontalContentAlignment="Left"     
+                                   Margin="10 8 0 0"
+                                   Width="250"
+                                   Height="35"  
+                                   Style="{StaticResource PlaceholderTextBoxStyle}"
+                                   materialDesign:TextFieldAssist.UnderlineBrush="#616161"/>
+                        <Button Background="Transparent"
+                                BorderThickness="0"
+                                Focusable="False"
+                                Width="50"
+                                Height="30"
+                                Command="{Binding Search}"
+                                CommandParameter="{Binding ElementName=User}">
+
+                            <materialDesign:PackIcon Kind="search" 
+                                             Foreground="#616161" 
+                                             Width="32" Height="32"
+                                             Margin="-15 -6.5 -10 0"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+
+                <!--Back LoginWindow-->
+
+                <StackPanel Grid.Column="2"
+                            HorizontalAlignment="Right">
+                    <Button Margin="0 15 30 0"
+                            Height="38"
+                            
+                            Background="#FFCB1212"
+                            BorderBrush="#50c878"
+                            Focusable="False"
+                            Click="LoginWindowOpen">
+                        <iconPacks:PackIconMaterial Kind="Door" 
+                                            VerticalAlignment="Center" 
+                                            HorizontalAlignment="Center" 
+                                            Foreground="White"
+                                            Height="30"
+                                            Width="35"/>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Grid.Row="0"
+                            HorizontalAlignment="Left"
+                            Orientation="Horizontal">
+                    <Button    Command="{Binding OpenUserInfWindow}"
+                               Margin="30 5 0 0"
+                               Focusable="False"
+                               Height="45"
+                               Width="70"
+                               Background="Transparent"
+                               BorderThickness="0">
+
+                        <iconPacks:PackIconMaterial Kind="Account" 
+                                            VerticalAlignment="Center" 
+                                            HorizontalAlignment="Center" 
+                                            Foreground="#FF2A5E76"
+                                            Height="35"
+                                            Width="55"/>
+                    </Button>
+                    <TextBlock Name="UsernameBlock"
+                               Text="{Binding Username}"
+                               FontWeight="Bold"
+                               FontSize="20"
+                               Margin="0 21 0 0"/>
+                </StackPanel>
+                <Grid/>
+            </Grid>
+
+            <!--Картинка 250 высота на 200-->
+
+            <Grid Grid.Row="2" OpacityMask="#FFC3F1CF">
+
+                <ScrollViewer Focusable="False">
+                    <ListBox Name="ViewAllFilms" 
+                             ItemTemplate="{StaticResource listTemplate}"
+                             ItemsSource="{Binding AllFilms}" 
+                             Focusable="False" SelectionChanged="ViewAllFilms_SelectionChanged">
+                        <ListBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF238B9D" Offset="0.9"/>
+                                <GradientStop Color="White"  Offset="0.09"/>
+                            </LinearGradientBrush>
+                        </ListBox.Background>
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate >
+                                <WrapPanel Orientation="Horizontal" 
+                                           IsItemsHost="True"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Top"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                </ScrollViewer>
+            </Grid>
+
+            <!--Button-->
+
+            <Grid Grid.Row="1">
+                <WrapPanel  Orientation="Horizontal"
+                            Margin="0 20 0 0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Button Content="Все"
+                            Width="80" 
+                            FontSize="20"
+                            Margin="0 0 20 0"
+                            Style="{StaticResource GenreButton}"
+                            Command="{Binding GetAllFilms}"/>
+                    <Button Content="Аниме"
+                            FontSize="20"
+                            Width="130" 
+                            Margin="0 0 20 0"
+                            Style="{StaticResource GenreButton}"
+                            Command="{Binding SortGenre}"
+                            CommandParameter="аниме"/>
+                    <Button Content="Приключения"
+                            Width="180" 
+                            FontSize="20"
+                            Margin="0 0 20 0"
+                            Style="{StaticResource GenreButton}"
+                            Command="{Binding SortGenre}"
+                            CommandParameter="приключения"/>
+                    <Button Content="Фэнтези"
+                            Width="120"
+                            FontSize="20"
+                            Margin="0 0 20 0"
+                            Style="{StaticResource GenreButton}"
+                            Command="{Binding SortGenre}"
+                            CommandParameter="фэнтези"/>
+                    <Button Content="Мелодрама"
+                            FontSize="20"
+                            Width="150"
+                            Margin="0 0 20 0"
+                            Style="{StaticResource GenreButton}"
+                            Command="{Binding SortGenre}"
+                            CommandParameter="мелодрама"/>
+                    <Button Content="Драма"
+                            FontSize="20"
+                            Width="130"
+                            Margin="0 0 20 0"
+                            Style="{StaticResource GenreButton}"
+                            Command="{Binding SortGenre}"
+                            CommandParameter="драма"/>
+                    <Button Content="Комедия"
+                            FontSize="20"
+                            Width="120"
+                            Margin="0 0 20 0"
+                            Style="{StaticResource GenreButton}"
+                            Command="{Binding SortGenre}"
+                            CommandParameter="комедия"/>
+                </WrapPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
